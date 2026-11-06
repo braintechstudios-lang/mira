@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 982" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3d7a8c"/>
+      <stop offset=".55" stop-color="#6aa3b1"/>
+      <stop offset="1" stop-color="#a7d0d8"/>
+    </linearGradient>
+    <linearGradient id="archFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b52a16"/>
+      <stop offset=".5" stop-color="#d23d1f"/>
+      <stop offset="1" stop-color="#9e2412"/>
+    </linearGradient>
+    <linearGradient id="archInner" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7f1c0e"/>
+      <stop offset="1" stop-color="#a8301a"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f06a45"/>
+      <stop offset=".6" stop-color="#e5512f"/>
+      <stop offset="1" stop-color="#d04222"/>
+    </linearGradient>
+    <linearGradient id="plateEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8361a"/>
+      <stop offset="1" stop-color="#93270f"/>
+    </linearGradient>
+    <pattern id="rivets" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+      <circle cx="10" cy="10" r="2.6" fill="#a8341a" opacity=".75"/>
+      <circle cx="9.3" cy="9.3" r="1.1" fill="#ff9a7a" opacity=".5"/>
+    </pattern>
+    <clipPath id="plateClip"><path d="M860 300 L1512 470 L1512 982 L1150 982 Z"/></clipPath>
+  </defs>
+
+  <rect width="1512" height="982" fill="url(#sky)"/>
+
+  <!-- the big arch: outer face, then the shadowed inner band -->
+  <path d="M-60 520 C 80 160, 520 80, 760 420 C 830 520, 870 640, 900 982 L 820 982 C 800 680, 760 560, 700 470 C 500 190, 120 260, 40 600 L -60 982 Z" fill="url(#archFace)"/>
+  <path d="M40 600 C 120 260, 500 190, 700 470 C 760 560, 800 680, 820 982 L 780 982 C 760 700, 720 590, 668 505 C 480 250, 150 310, 80 640 L 0 982 L -20 982 Z" fill="url(#archInner)"/>
+  <!-- the twisting web where the arch meets the plate -->
+  <path d="M380 210 C 560 260, 700 330, 860 420 L 880 470 C 720 400, 560 330, 330 260 Z" fill="#c8381c"/>
+  <path d="M330 260 C 560 330, 720 400, 880 470 L 870 500 C 700 440, 540 380, 300 300 Z" fill="#8f2210"/>
+  <!-- a smaller arch behind, through the gap -->
+  <path d="M760 520 C 800 420, 900 400, 960 520 L 940 530 C 890 440, 815 450, 785 535 Z" fill="#b8301a"/>
+
+  <!-- the riveted plate -->
+  <path d="M860 300 L1512 470 L1512 982 L1150 982 Z" fill="url(#plate)"/>
+  <rect width="1512" height="982" fill="url(#rivets)" clip-path="url(#plateClip)" opacity=".9"/>
+  <path d="M860 300 L1150 982 L1110 982 L846 330 Z" fill="url(#plateEdge)"/>
+  <path d="M905 360 L1512 520" stroke="#b8381c" stroke-width="5" opacity=".7"/>
+  <path d="M1290 410 L1380 982" stroke="#c4421f" stroke-width="4" opacity=".6"/>
+</svg>
