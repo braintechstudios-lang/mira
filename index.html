@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mira for Mac</title>
+<link rel="icon" href="shots/icon.svg" type="image/svg+xml">
 <meta name="description" content="Mira turns the MacBook notch into a hub: teleprompter, interview assistant, music, drop shelf, meetings, notes and timers.">
 <style>
 :root{
@@ -27,7 +28,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 nav{position:sticky;top:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid #1d1d1f}
 nav .wrap{display:flex;align-items:center;gap:26px;height:48px;font-size:12px}
 .logo{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:600;letter-spacing:-.01em}
-.logo i{width:20px;height:12px;background:#fff;border-radius:0 0 6px 6px}
+.logo img{width:20px;height:20px}
 nav .links{margin-left:auto;display:flex;gap:24px;color:#d2d2d7}
 nav .links a:hover{color:#fff}
 nav .get{background:var(--blue);color:#fff;padding:4px 12px;border-radius:980px;font-size:12px}
@@ -226,7 +227,7 @@ footer a:hover{color:#fff}
 <body>
 
 <nav><div class="wrap">
-  <a class="logo" href="#"><i></i>Mira</a>
+  <a class="logo" href="#"><img src="shots/logo.svg" alt="">Mira</a>
   <div class="links"><a href="#features">Features</a><a href="#try">Try it</a><a href="#privacy">Privacy</a><a href="#download">Download</a></div>
   <a class="get" href="#download">Download</a>
 </div></nav>
@@ -381,7 +382,7 @@ footer a:hover{color:#fff}
 <!-- ========== DOWNLOAD ========== -->
 <section class="dl" id="download">
   <div class="wrap">
-    <div class="appicon rv"></div>
+    <img class="rv" src="shots/icon.svg" alt="Mira icon" style="width:112px;height:112px;margin:0 auto 30px">
     <h2 class="rv d1">Get Mira.</h2>
     <p class="lead rv d2" style="margin-top:12px">Free. Set up in a minute.</p>
     <div class="ctas rv d2" style="margin-top:26px"><a class="btn blue" href="https://github.com/braintechstudios-lang/mira/releases/latest/download/Mira.dmg">Download Mira.dmg</a></div>
