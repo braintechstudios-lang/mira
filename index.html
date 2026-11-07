@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mira for Mac</title>
 <link rel="icon" href="shots/icon.svg" type="image/svg+xml">
-<meta name="description" content="Mira turns the MacBook notch into a hub: teleprompter, interview assistant, music, drop shelf, meetings, notes and timers.">
+<meta name="description" content="Mira turns the MacBook notch into a hub: a voice assistant, a meeting agent, a teleprompter, interview help, music, files, notes and timers. And a cat.">
 <style>
 :root{
   --bg:#000; --fg:#f5f5f7; --dim:#86868b; --tile:#101011; --tile2:#161617; --line:#232325;
@@ -103,6 +103,25 @@ section{padding:120px 0}
 .tile.in .stage img{clip-path:inset(0 0 0 0)}
 .tile .stage .hwn{position:absolute;left:50%;top:-1px;transform:translateX(-50%);width:22%;height:10px;background:#000;border-radius:0 0 8px 8px}
 @media (max-width:820px){.grid{grid-template-columns:1fr}.tile .txt{padding:32px 26px 0}}
+.tile .stage.stack{flex-direction:column;align-items:center;gap:14px;padding-bottom:34px}
+:root{--assistant:#c799ff;--cat:#fad352}
+
+/* notch cat */
+.catsec{padding-top:40px}
+.catstage{position:relative;height:520px;margin-top:48px;border-radius:28px;overflow:hidden;background:#3d7a8c url(shots/wallpaper.svg) center/cover;touch-action:none;user-select:none;-webkit-user-select:none}
+.catstage canvas{position:absolute;inset:0;z-index:2}
+.catstage canvas.grabbing{cursor:grabbing!important}
+.catstage .cbar{position:absolute;left:0;right:0;top:0;height:32px;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:0 18px;font-size:13px;font-weight:600;color:#fff;background:rgba(0,0,0,.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.catstage .cnotch{position:absolute;left:50%;top:0;transform:translateX(-50%);width:190px;height:32px;background:#000;border-radius:0 0 12px 12px;z-index:3}
+.catstage .chint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%) translateY(10px);z-index:4;font-size:14px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);padding:7px 14px;border-radius:980px;opacity:0;transition:.5s var(--ease);pointer-events:none;backdrop-filter:blur(10px)}
+.catstage .chint.on{opacity:1;transform:translateX(-50%)}
+.catctl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.catctl button{background:#1d1d1f;color:#f5f5f7;font-size:14px;font-weight:600;padding:9px 18px;border-radius:980px;transition:background .2s}
+.catctl button:hover{background:#2c2c2e}
+.catctl #catSound{background:transparent;color:var(--dim)}
+.catnote{text-align:center;color:var(--dim);font-size:14px;margin-top:18px}
+.catnote b{color:var(--cat)}
+@media (max-width:700px){.catstage{height:440px;border-radius:20px}.catstage .cnotch{width:150px}}
 
 /* ---------- light section: try it ---------- */
 .lightsec{background:var(--light);color:var(--ink)}
@@ -228,7 +247,7 @@ footer a:hover{color:#fff}
 
 <nav><div class="wrap">
   <a class="logo" href="#"><img src="shots/logo.svg" alt="">Mira</a>
-  <div class="links"><a href="#features">Features</a><a href="#try">Try it</a><a href="#privacy">Privacy</a><a href="#download">Download</a></div>
+  <div class="links"><a href="#features">Features</a><a href="#cat">Notch Cat</a><a href="#try">Try it</a><a href="#privacy">Privacy</a><a href="#download">Download</a></div>
   <a class="get" href="#download">Download</a>
 </div></nav>
 
@@ -237,7 +256,7 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="eyebrow rv">Mira for Mac</div>
     <h1 class="rv d1">Your notch.<br>Finally useful.</h1>
-    <p class="lead rv d2">A teleprompter, an interview assistant, your music, meetings, notes and files, <b>all in the black bar at the top of your MacBook.</b></p>
+    <p class="lead rv d2">A voice assistant, a meeting agent, a teleprompter, your music, notes and files, <b>all in the black bar at the top of your MacBook.</b> Oh, and a cat.</p>
     <div class="ctas rv d2">
       <a class="btn blue" href="https://github.com/braintechstudios-lang/mira/releases/latest/download/Mira.dmg">Download for Mac</a>
       <a class="link" href="#features">See what it does ›</a>
@@ -265,6 +284,18 @@ footer a:hover{color:#fff}
 
     <div class="grid">
       <div class="tile wide rv">
+        <div class="txt"><div class="tag" style="color:var(--assistant)">Ask Mira · new</div><h3>Talk to your notch.</h3>
+          <p>Press <b>⌃⌥A</b> and say what you need. Mira answers out loud, sets timers, saves notes, plays music, joins your meeting and runs your Shortcuts. <b>Bigger jobs run in the background, and Mira tells you when they're done.</b></p></div>
+        <div class="stage stack"><div class="hwn"></div><img src="shots/ask-timer.webp" alt="Ask Mira setting a timer" style="--w:min(86%,760px)"><img src="shots/ask-task.webp" alt="Mira reporting back that an email draft is ready" style="--w:min(86%,760px)"></div>
+      </div>
+
+      <div class="tile wide rv">
+        <div class="txt"><div class="tag" style="color:var(--meet)">Meeting agent · new</div><h3>Before, during and after every call.</h3>
+          <p>Five minutes before, a brief: what it's about and what you promised last time. During, notes. After, a recap with your to-dos in Reminders and <b>a follow-up email ready to send</b>, only when you say yes.</p></div>
+        <div class="stage stack"><div class="hwn"></div><img src="shots/agent-brief.webp" alt="Meeting brief five minutes before a call" style="--w:min(86%,760px)"><img src="shots/agent-recap.webp" alt="Recap after the call, offering the follow-up email" style="--w:min(86%,760px)"></div>
+      </div>
+
+      <div class="tile wide rv">
         <div class="txt"><div class="tag" style="color:#fff">Launcher</div><h3>Everything, one hover away.</h3>
           <p>Each tile shows what's going on at a glance. Click one to open it. <b>Pick which apps live here</b> from the Library.</p></div>
         <div class="stage"><div class="hwn"></div><img src="shots/launcher.webp" alt="Mira's launcher under the notch" style="--w:min(78%,640px)"></div>
@@ -272,7 +303,7 @@ footer a:hover{color:#fff}
 
       <div class="tile wide rv">
         <div class="txt"><div class="tag" style="color:var(--interview)">Interview assistant</div><h3>They ask. You get a hint.</h3>
-          <p>Mira hears the call, writes down what they say and suggests a short answer in your own words. Works with Zoom, Meet, Teams and browser calls. Uses <b>your own Claude, OpenAI, Gemini or Grok key</b>, stored in your Keychain.</p></div>
+          <p>Mira hears the call, writes down what they say and suggests a short answer in your own words. Works with Zoom, Meet, Teams and browser calls. Uses <b>your own Claude, OpenAI, Gemini or Grok key</b>, stored in your Keychain. Strong accent? <b>OpenAI or Gemini can write down the call</b>, so Nigerian, Ghanaian, Indian and every other English is understood.</p></div>
         <div class="stage"><div class="hwn"></div><img src="shots/hub-interview.webp" alt="Interview assistant with transcript, suggested answer and notes" style="--w:min(92%,840px)"></div>
       </div>
 
@@ -306,6 +337,28 @@ footer a:hover{color:#fff}
         <div class="stage"><div class="hwn"></div><img src="shots/library.webp" alt="The Library of notch apps" style="--w:min(92%,840px)"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== NOTCH CAT ========== -->
+<section class="catsec" id="cat">
+  <div class="wrap">
+    <div class="intro center">
+      <div class="eyebrow rv" style="color:var(--cat)">New · Notch Cat</div>
+      <h2 class="rv">There's a cat<br>in your notch.</h2>
+      <p class="lead rv d1">She comes out when she feels like it. Peeks, hangs around, slides down with her claws out. <b>Grab her and pull. Then let go.</b></p>
+    </div>
+    <div class="catstage rv d1" id="catStage">
+      <div class="cbar"><span>&#63743; Finder</span><span>9:41</span></div>
+      <div class="cnotch"></div>
+      <canvas></canvas>
+      <div class="chint" id="catHint">grab her &amp; pull down ↓</div>
+    </div>
+    <div class="catctl rv d2">
+      <button data-cat="peek">Peek</button><button data-cat="hang">Hang</button><button data-cat="claws">Claw slide</button><button data-cat="tail">Tail</button>
+      <button id="catSound">🔊 Sound on</button>
+    </div>
+    <p class="catnote rv d2">In Mira she's an app in the Library, off until you add her. She hides while you present or are on a call. <b>#NotchCat</b></p>
   </div>
 </section>
 
@@ -563,5 +616,6 @@ fetch('https://api.github.com/repos/braintechstudios-lang/mira/releases/latest')
 }).catch(() => {});
 })();
 </script>
+<script src="cat.js"></script>
 </body>
 </html>
