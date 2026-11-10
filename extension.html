@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to install the Mira extension</title>
+<style>
+  :root { --ink:#1d1d1f; --soft:#6e6e73; --line:#e3e3e8; --bg:#f5f5f7; --card:#fff; --accent:#F59E2C; --blue:#1a73e8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+  header { text-align:center; margin-bottom: 36px; }
+  .badge { display:inline-block; background:#111; color:#fff; border-radius:999px; padding:6px 14px; font-weight:700; font-size:13px; letter-spacing:.04em; }
+  h1 { font-size: 34px; margin: 14px 0 6px; letter-spacing:-.02em; }
+  header p { color: var(--soft); margin: 0; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns: 44px 1fr; gap: 6px 16px; }
+  .num { grid-row: span 2; width:40px; height:40px; border-radius:50%; background:var(--accent); color:#111; font-weight:800; display:grid; place-items:center; font-size:18px; }
+  .step h2 { margin:6px 0 2px; font-size:19px; }
+  .step p { margin:0 0 12px; color:var(--soft); }
+  .step svg { grid-column: 2; width:100%; height:auto; border-radius:12px; border:1px solid var(--line); background:#fafafa; }
+  code, kbd { font: 600 14px ui-monospace, SFMono-Regular, Menlo, monospace; background:#eef0f3; padding:2px 7px; border-radius:6px; color:var(--ink); }
+  .note { background:#fff8ec; border:1px solid #f6dfb5; border-radius:14px; padding:14px 18px; color:#5c4a24; font-size:14.5px; }
+  .note b { color:#3d2f12; }
+  footer { text-align:center; color:var(--soft); font-size:13.5px; margin-top:28px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <span class="badge">MIRA · JOB HUNT</span>
+  <h1>Install the Mira extension</h1>
+  <p style="margin:18px 0 22px"><a href="downloads/Mira%20Extension.zip" style="display:inline-block;background:#0071e3;color:#fff;border-radius:980px;padding:12px 24px;font-weight:600;text-decoration:none">Download Mira Extension.zip</a></p>
+  <p>It lets Mira fill job applications in your browser. You always check the form and click Submit yourself.<br>Takes about a minute. Works in Chrome, Brave, Edge and Arc.</p>
+</header>
+
+<!-- 1 -->
+<section class="step">
+  <div class="num">1</div>
+  <h2>Unzip it</h2>
+  <p>In your <b>Downloads</b> folder, double-click <b>Mira Extension.zip</b>. A folder called <b>Mira Extension</b> appears next to it. Keep this folder: the browser uses it from there.</p>
+  <svg viewBox="0 0 640 200" aria-label="Finder showing the zip and the folder">
+    <rect x="0" y="0" width="640" height="34" fill="#ececee"/>
+    <circle cx="20" cy="17" r="6" fill="#ff5f57"/><circle cx="40" cy="17" r="6" fill="#febc2e"/><circle cx="60" cy="17" r="6" fill="#28c840"/>
+    <text x="320" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#444">Downloads</text>
+    <!-- zip -->
+    <g transform="translate(150,60)">
+      <rect x="0" y="0" width="70" height="86" rx="6" fill="#fff" stroke="#c9c9cf"/>
+      <rect x="31" y="6" width="8" height="40" fill="#d8d8de"/>
+      <rect x="27" y="46" width="16" height="14" rx="3" fill="#b9b9c2"/>
+      <text x="35" y="112" text-anchor="middle" font-size="12" fill="#333">Mira Extension.zip</text>
+    </g>
+    <!-- arrow -->
+    <path d="M250 103 h90" stroke="#F59E2C" stroke-width="4" stroke-linecap="round"/>
+    <path d="M335 92 l14 11 l-14 11" fill="none" stroke="#F59E2C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="295" y="88" text-anchor="middle" font-size="12" fill="#a0611a" font-weight="700">double-click</text>
+    <!-- folder -->
+    <g transform="translate(380,62)">
+      <path d="M0 14 q0-10 10-10 h26 l10 10 h44 q10 0 10 10 v54 q0 10 -10 10 h-80 q-10 0 -10-10z" fill="#5aa7f2"/>
+      <path d="M0 28 h100 v50 q0 10 -10 10 h-80 q-10 0 -10-10z" fill="#74b8f7"/>
+      <text x="50" y="110" text-anchor="middle" font-size="12" font-weight="700" fill="#333">Mira Extension</text>
+    </g>
+  </svg>
+</section>
+
+<!-- 2 -->
+<section class="step">
+  <div class="num">2</div>
+  <h2>Open your browser's extensions page</h2>
+  <p>Click the address bar, type <code>chrome://extensions</code> and press <kbd>Return</kbd>.<br>(Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code>)</p>
+  <svg viewBox="0 0 640 120" aria-label="Browser address bar with chrome://extensions">
+    <rect x="0" y="0" width="640" height="120" fill="#f1f3f4"/>
+    <circle cx="20" cy="22" r="6" fill="#ff5f57"/><circle cx="40" cy="22" r="6" fill="#febc2e"/><circle cx="60" cy="22" r="6" fill="#28c840"/>
+    <rect x="90" y="10" width="190" height="26" rx="8" fill="#fff"/>
+    <text x="108" y="28" font-size="12" fill="#444">New Tab</text>
+    <rect x="24" y="52" width="592" height="44" rx="22" fill="#fff" stroke="#1a73e8" stroke-width="2.5"/>
+    <text x="54" y="80" font-size="17" fill="#202124" font-family="Menlo, monospace">chrome://extensions</text>
+    <rect x="252" y="64" width="2" height="22" fill="#1a73e8"/>
+    <text x="596" y="80" text-anchor="end" font-size="13" fill="#a0611a" font-weight="700">↵ Return</text>
+  </svg>
+</section>
+
+<!-- 3 -->
+<section class="step">
+  <div class="num">3</div>
+  <h2>Turn on Developer mode</h2>
+  <p>It's the switch in the <b>top-right corner</b> of the extensions page. (It only lets you add extensions from a folder. Nothing else changes.)</p>
+  <svg viewBox="0 0 640 140" aria-label="Developer mode switch turned on">
+    <rect x="0" y="0" width="640" height="140" fill="#fff"/>
+    <rect x="0" y="0" width="640" height="56" fill="#f8f9fa"/>
+    <text x="24" y="35" font-size="20" font-weight="600" fill="#202124">Extensions</text>
+    <text x="470" y="35" font-size="14" fill="#202124">Developer mode</text>
+    <rect x="583" y="21" width="36" height="18" rx="9" fill="#a8c7fa"/>
+    <circle cx="610" cy="30" r="11" fill="#1a73e8"/>
+    <circle cx="601" cy="30" r="34" fill="none" stroke="#F59E2C" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="24" y="80" width="130" height="36" rx="8" fill="#fff" stroke="#dadce0"/>
+    <text x="89" y="103" text-anchor="middle" font-size="13" fill="#1a73e8" font-weight="600">Load unpacked</text>
+    <rect x="166" y="80" width="140" height="36" rx="8" fill="#fff" stroke="#dadce0"/>
+    <text x="236" y="103" text-anchor="middle" font-size="13" fill="#1a73e8" font-weight="600">Pack extension</text>
+    <text x="330" y="103" font-size="12" fill="#888">← these buttons appear</text>
+  </svg>
+</section>
+
+<!-- 4 -->
+<section class="step">
+  <div class="num">4</div>
+  <h2>Click "Load unpacked" and choose the folder</h2>
+  <p>Click <b>Load unpacked</b>, go to <b>Downloads</b>, select the <b>Mira Extension</b> folder (the folder, not the zip) and click <b>Select</b>.</p>
+  <svg viewBox="0 0 640 230" aria-label="Choosing the Mira Extension folder">
+    <rect x="0" y="0" width="640" height="230" fill="#f5f5f7"/>
+    <rect x="60" y="16" width="520" height="200" rx="12" fill="#fff" stroke="#d2d2d7"/>
+    <rect x="60" y="16" width="130" height="200" rx="12" fill="#f0f0f3"/>
+    <text x="80" y="48" font-size="11" fill="#888" font-weight="700">FAVOURITES</text>
+    <rect x="70" y="58" width="110" height="24" rx="6" fill="#dcdce2"/>
+    <text x="82" y="75" font-size="13" fill="#222">⬇︎ Downloads</text>
+    <text x="82" y="103" font-size="13" fill="#555">Desktop</text>
+    <text x="82" y="127" font-size="13" fill="#555">Documents</text>
+    <rect x="200" y="56" width="370" height="28" rx="6" fill="#1a73e8"/>
+    <text x="214" y="75" font-size="13" fill="#fff">📁  Mira Extension</text>
+    <text x="214" y="105" font-size="13" fill="#999">🗜  Mira Extension.zip</text>
+    <text x="214" y="131" font-size="13" fill="#999">How to install Mira Extension.html</text>
+    <rect x="404" y="172" width="72" height="28" rx="7" fill="#fff" stroke="#c9c9cf"/>
+    <text x="440" y="191" text-anchor="middle" font-size="13" fill="#222">Cancel</text>
+    <rect x="486" y="172" width="80" height="28" rx="7" fill="#1a73e8"/>
+    <text x="526" y="191" text-anchor="middle" font-size="13" fill="#fff" font-weight="600">Select</text>
+    <circle cx="526" cy="186" r="26" fill="none" stroke="#F59E2C" stroke-width="3" stroke-dasharray="6 5"/>
+  </svg>
+</section>
+
+<!-- 5 -->
+<section class="step">
+  <div class="num">5</div>
+  <h2>Done</h2>
+  <p>"Mira" now shows in your extensions. Open Job Hunt in your notch: it says <b>Browser extension connected</b> within a minute. From now on, <b>Apply</b> opens the job and Mira fills the form. Check it, then click Submit.</p>
+  <svg viewBox="0 0 640 140" aria-label="Mira extension card and connected status">
+    <rect x="0" y="0" width="640" height="140" fill="#fff"/>
+    <rect x="24" y="20" width="290" height="100" rx="12" fill="#fff" stroke="#dadce0"/>
+    <rect x="42" y="38" width="40" height="40" rx="9" fill="#111"/>
+    <text x="62" y="65" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">m</text>
+    <text x="96" y="52" font-size="15" font-weight="600" fill="#202124">Mira 1.0</text>
+    <text x="96" y="72" font-size="11.5" fill="#5f6368">Lets the Mira Mac app fill job…</text>
+    <rect x="262" y="88" width="36" height="18" rx="9" fill="#a8c7fa"/><circle cx="289" cy="97" r="11" fill="#1a73e8"/>
+    <rect x="340" y="34" width="276" height="72" rx="16" fill="#111"/>
+    <text x="362" y="66" font-size="13" fill="#fff" font-weight="600">🧩  Browser extension connected</text>
+    <text x="362" y="88" font-size="11.5" fill="#9a9a9f">in Job Hunt, in your notch</text>
+  </svg>
+</section>
+
+<div class="note">
+  <b>Good to know.</b> The extension only talks to the Mira app on your own Mac. It acts only on a job page you opened with Apply in Mira, never on other sites. It never clicks Submit, and it never sees your passwords. If your browser shows a "developer mode extensions" notice, that's normal for extensions added from a folder. Don't move or delete the <b>Mira Extension</b> folder, or the browser will turn the extension off.
+</div>
+
+<footer><a href="./" style="color:inherit">Mira</a> · free for Mac · <a href="./#download" style="color:inherit">Get Mira</a></footer>
+</main>
+</body>
+</html>

@@ -103,6 +103,12 @@ section{padding:120px 0}
 .tile.in .stage img{clip-path:inset(0 0 0 0)}
 .tile .stage .hwn{position:absolute;left:50%;top:-1px;transform:translateX(-50%);width:22%;height:10px;background:#000;border-radius:0 0 8px 8px}
 @media (max-width:820px){.grid{grid-template-columns:1fr}.tile .txt{padding:32px 26px 0}}
+.tour{padding-bottom:20px}.tour .lead{margin:12px auto 0}
+.tourvid{max-width:720px;margin:36px auto 0;border-radius:28px;overflow:hidden;background:#0e0e11;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.tourvid video{display:block;width:100%;height:auto;aspect-ratio:1/1}
+.tile .stage.plain img{clip-path:none;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.tile .extlink{display:inline-flex;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:16px}
+.tile .extlink a{color:var(--blue)}
 .tile .stage.stack{flex-direction:column;align-items:center;gap:14px;padding-bottom:34px}
 :root{--assistant:#c799ff;--cat:#fad352}
 
@@ -247,7 +253,7 @@ footer a:hover{color:#fff}
 
 <nav><div class="wrap">
   <a class="logo" href="#"><img src="shots/logo.svg" alt="">Mira</a>
-  <div class="links"><a href="#features">Features</a><a href="#cat">Notch Cat</a><a href="#try">Try it</a><a href="#privacy">Privacy</a><a href="#download">Download</a></div>
+  <div class="links"><a href="#features">Features</a><a href="#jobs">Job Hunt</a><a href="#cat">Notch Cat</a><a href="#try">Try it</a><a href="#privacy">Privacy</a><a href="#download">Download</a></div>
   <a class="get" href="#download">Download</a>
 </div></nav>
 
@@ -256,7 +262,7 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="eyebrow rv">Mira for Mac</div>
     <h1 class="rv d1">Your notch.<br>Finally useful.</h1>
-    <p class="lead rv d2">A voice assistant, a meeting agent, a teleprompter, your music, notes and files, <b>all in the black bar at the top of your MacBook.</b> Oh, and a cat.</p>
+    <p class="lead rv d2">A job hunter, an interview coach, a voice assistant, a meeting agent, a teleprompter, your music, notes and files, <b>all in the black bar at the top of your MacBook.</b> Oh, and a cat.</p>
     <div class="ctas rv d2">
       <a class="btn blue" href="https://github.com/braintechstudios-lang/mira/releases/latest/download/Mira.dmg">Download for Mac</a>
       <a class="link" href="#features">See what it does ›</a>
@@ -274,6 +280,15 @@ footer a:hover{color:#fff}
   </div>
 </header>
 
+<!-- ========== TOUR VIDEO ========== -->
+<section class="tour" id="tour">
+  <div class="wrap center">
+    <h2 class="rv">See it in under a minute.</h2>
+    <p class="lead rv d1">Hover, open, and everything that lives in the notch. Then the cat.</p>
+    <div class="tourvid rv d2"><video src="shots/mira-tour.mp4" poster="shots/mira-tour-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Mira's notch opening its sections: music, prompter, meetings, interview, clipboard, drop, Claude Code, Job Hunt, and the notch cat"></video></div>
+  </div>
+</section>
+
 <!-- ========== FEATURES ========== -->
 <section id="features">
   <div class="wrap">
@@ -283,9 +298,16 @@ footer a:hover{color:#fff}
     </div>
 
     <div class="grid">
+      <div class="tile wide rv" id="jobs">
+        <div class="txt"><div class="tag" style="color:#fba845">Job Hunt · new</div><h3>It looks for jobs while you work.</h3>
+          <p>Pick up to three roles, the countries you want and how often. Mira searches, <b>rewrites your CV for each role</b> (same design, real facts only), writes the cover note and, with the Mira browser extension, <b>fills the application</b>. You check it and click Submit. It even watches Mail for replies and puts interviews in your calendar.</p>
+          <div class="extlink"><a href="downloads/Mira%20Extension.zip">Get the browser extension (.zip) ›</a><a href="extension.html">How to install it ›</a></div></div>
+        <div class="stage"><div class="hwn"></div><img src="shots/hub-jobs.webp" alt="Job Hunt in the notch: three roles, places, schedule and a list of jobs" style="--w:min(92%,840px)"></div>
+      </div>
+
       <div class="tile wide rv">
-        <div class="txt"><div class="tag" style="color:var(--assistant)">Ask Mira · new</div><h3>Talk to your notch.</h3>
-          <p>Press <b>⌃⌥A</b> and say what you need. Mira answers out loud, sets timers, saves notes, plays music, joins your meeting and runs your Shortcuts. <b>Bigger jobs run in the background, and Mira tells you when they're done.</b></p></div>
+        <div class="txt"><div class="tag" style="color:var(--assistant)">Ask Mira · Hey Mira</div><h3>Talk to your notch.</h3>
+          <p>Say <b>“Hey Mira”</b>, or press <b>⌃⌥A</b>, and say what you need. Mira answers out loud, sets timers, saves notes, plays music, joins your meeting and runs your Shortcuts. <b>Bigger jobs run in the background, and Mira tells you when they're done.</b> “Hey Mira” listens on your Mac only, and with AirPods or a Bluetooth speaker Mira uses your Mac's mic, so your music stays clear.</p></div>
         <div class="stage stack"><div class="hwn"></div><img src="shots/ask-timer.webp" alt="Ask Mira setting a timer" style="--w:min(86%,760px)"><img src="shots/ask-task.webp" alt="Mira reporting back that an email draft is ready" style="--w:min(86%,760px)"></div>
       </div>
 
@@ -302,9 +324,15 @@ footer a:hover{color:#fff}
       </div>
 
       <div class="tile wide rv">
-        <div class="txt"><div class="tag" style="color:var(--interview)">Interview assistant</div><h3>They ask. You get a hint.</h3>
-          <p>Mira hears the call, writes down what they say and suggests a short answer in your own words. Works with Zoom, Meet, Teams and browser calls. Uses <b>your own Claude, OpenAI, Gemini or Grok key</b>, stored in your Keychain. Strong accent? <b>OpenAI or Gemini can write down the call</b>, so Nigerian, Ghanaian, Indian and every other English is understood.</p></div>
+        <div class="txt"><div class="tag" style="color:var(--interview)">Interview coach</div><h3>They ask. You get your answer.</h3>
+          <p>Add your CV, your links and the job once. Mira hears the call and <b>suggests a short answer from your real experience</b>, to the question that was actually asked. It asks “Is this an interview?” when a call starts, so ordinary meetings just get notes. Works with Zoom, Meet, Teams and browser calls. Uses <b>your own Claude, OpenAI, Gemini or Grok key</b>, stored in your Keychain. Strong accent? <b>OpenAI or Gemini can write down the call</b>, so Nigerian, Ghanaian, Indian and every other English is understood.</p></div>
         <div class="stage"><div class="hwn"></div><img src="shots/hub-interview.webp" alt="Interview assistant with transcript, suggested answer and notes" style="--w:min(92%,840px)"></div>
+      </div>
+
+      <div class="tile wide rv">
+        <div class="txt"><div class="tag" style="color:var(--markets)">Markets · After the news</div><h3>CPI is out. Here's what gold did.</h3>
+          <p>After every high-impact US release, Mira shows <b>the actual figures against the forecast</b>, then how gold moved 15 minutes and an hour later, and saves a recap to Notes. Facts and what usually happens, never a trade call.</p></div>
+        <div class="stage"><div class="hwn"></div><img src="shots/hub-news.webp" alt="After the news: CPI hotter than expected, and gold's move 15 minutes and an hour later" style="--w:min(92%,840px)"></div>
       </div>
 
       <div class="tile rv">
